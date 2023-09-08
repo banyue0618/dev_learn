@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/micro-service-spring-cloud-dev-api/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro-service-spring-cloud-dev-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro-service-spring-cloud-dev-eureka-7001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro-service-spring-cloud-dev-eureka-7002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro-service-spring-cloud-dev-eureka-7003/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro-service-spring-cloud-dev-log/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro-service-spring-cloud-dev-util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro-service-spring-cloud-grpc-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro-service-spring-cloud-grpc-proto/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro-service-spring-cloud-grpc-server/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/micro-service-spring-cloud-provider-dept/src/main/java" charset="UTF-8" />
+  </component>
+</project>

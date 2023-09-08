@@ -1,0 +1,49 @@
+server:
+  port: 8443
+  http2:
+    enabled: true
+  ssl:
+    key-store: D:/SSL/openssl/client.p12
+#    key-alias: tomcat
+    key-store-password: 123456
+    key-store-type: PKCS12
+    key-password: 123456
+    enabled: true
+#    client-auth: need
+#    trust-store: D:/SSL/openssl/client.p12
+#    trust-store-password: 123456
+#    key-store-provider: SUN
+
+spring:
+  application:
+    name: micro-service-grpc-client  #微服务名称，对外暴漏的微服务名称，十分重要
+
+eureka:
+  client: #将客户端注册到 eureka 服务列表内
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka  #这个地址是 7001注册中心在 application.yml 中暴露出来额注册地址 （单机版）
+#      defaultZone: http://127.0.0.1:7001/eureka/,http://127.0.0.1:7002/eureka/,http://127.0.0.1:7003/eureka/  #将服务注册到集群
+
+  instance:
+    instance-id: micro-service-grpc-client #自定义服务名称信息
+    prefer-ip-address: true  #显示访问路径的 ip 地址
+grpc:
+  client:
+    micro-service-provider-dept:
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiationType: TLS #plaintext grpc传输通信是否采用加密传输，建议采用加密传输 TLS
+      security: #安全相关配置
+        clientAuthEnabled: true
+        certificateChain: classpath:keys/client/client.cer
+        privateKey: classpath:keys/client/client.pk8
+        authorityOverride: localhost #必须设置 否则tls通信证书校验会失败
+        trustCertCollection: classpath:keys/server/server.cer  #必须设置 添加信任的服务端证书
+
+auth:
+  username: user
+  password: 123456
+
+logging:
+  level:
+    root: info
