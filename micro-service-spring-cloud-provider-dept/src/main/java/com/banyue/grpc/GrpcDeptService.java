@@ -13,7 +13,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-import java.util.stream.Collectors;
 
 /**
  * @author: zhangsp
@@ -30,7 +29,7 @@ public class GrpcDeptService extends DeptServiceGrpc.DeptServiceImplBase{
     @Override
     public void queryDeptList(DeptRequest request, StreamObserver<DeptResponse> responseObserver) {
 
-        List<com.banyue.api.Vo.Dept> depts = deptBaseService.selectAll();
+        List<com.banyue.api.vo.Dept> depts = deptBaseService.selectAll();
 
         List<Dept> deptList = new ArrayList<>();
 

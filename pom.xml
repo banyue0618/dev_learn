@@ -29,7 +29,6 @@
     </properties>
 
     <modules>
-        <module>micro-service-spring-cloud-dev-api</module>
         <module>micro-service-spring-cloud-dev-common</module>
         <module>micro-service-spring-cloud-dev-eureka-7001</module>
         <module>micro-service-spring-cloud-provider-dept</module>
@@ -40,6 +39,7 @@
         <module>micro-service-spring-cloud-grpc-client</module>
         <module>micro-service-spring-cloud-dev-util</module>
         <module>micro-service-spring-cloud-dev-log</module>
+        <module>micro-service-spring-cloud-dev-demo</module>
     </modules>
 
     <dependencyManagement>

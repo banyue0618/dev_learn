@@ -56,31 +56,11 @@ public class UserInterceptor extends HandlerInterceptorAdapter {
         userList.add(new User("李四", 14));
 
         userList = userList.stream().collect(Collectors.toMap(User::getUserName, k -> k, (k1, k2)->{
-            k1.setAge(k1.getAge()  + k2.getAge());
+            k1.setAge(Math.max(k1.getAge(), k2.getAge()));
             return k1;
         })).values().stream().collect(Collectors.toList());
 
         userList.forEach(System.out::println);
-
-//        String reg = "\\s*(?:\"(?=[^>]*?(?:(?=\\\\)|>|<(?:(?!script\\b)[\\s\\S])|\\bi[^\\s>]+\\b\\s*=|\\bon[a-z]+\\s*=\\s*))[^>]*+\")|(?:'(?=[^>]*?(?:(?=\\\\)|>|<(?:(?!script\\b)[\\s\\S])|\\bi[^\\s>]+\\b\\s*=|\\bon[a-z]+\\s*=\\s*))[^>]*+')/igm;";
-//        String reg = "^background-(?:color|image|position|repeat|size):\\s*([^;\\{\\}]+);*$";
-//        String reg = "data-background-(style|size|position|image):\\s*[^;\\{\\}]+";
-//        String reg = "/data-background(?:-(style|size|position|image))+:\\s*([^;\\{\\}]+(?:\\([^;]*\\))?)[;\\}]";
-        String reg = "^(?!//)(?![\\p{L}\\p{N}\\\\\\.\\#@\\$%\\+&amp;;\\-_~,\\?=/!]*(&amp;colon))[\\p{L}\\p{N}\\\\\\.\\#@\\$%\\+&amp;;\\-_~,\\?=/!]*";
-
-//        boolean b = Pattern.matches(reg, "background-repeat:repeat; background-position:center center; background-image:url(http://pic1.win4000.com/wallpaper/d/55138396e9183.jpg);");
-        boolean c = Pattern.matches(reg, "https://tse1-mm.cn.bing.net/th/id/OIP-C.kb8uYgKRGCDfjRgcLs1PrgHaEt?w=279&amp;h=180&amp;c=7&amp;r=0&amp;o=5&amp;dpr=1.3&amp;pid=1.7");
-//        boolean b = Pattern.matches("^(?=/fbacs/fs/00!tmpfiledata/).*(?<=你好)$", "/fbacs/fs/00!tmpfiledata/0000000000131364/R-C.jpg?_downloadmode=2");
-
-        System.out.println(c);
-
-
-        HashMap<String,String> map = new HashMap<>();
-        map.put("1","10");
-        map.put("1","100");
-        for (Map.Entry<String, String> entry : map.entrySet()) {
-            System.out.println(entry.getKey() + "-" + entry.getValue());
-        }
 
     }
 }

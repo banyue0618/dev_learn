@@ -74,12 +74,6 @@
 <!--            <groupId>org.springframework.boot</groupId>-->
 <!--            <artifactId>spring-boot-starter-actuator</artifactId>-->
 <!--        </dependency>-->
-        <dependency>
-            <groupId>com.banyue</groupId>
-            <artifactId>micro-service-spring-cloud-dev-api</artifactId>
-            <version>1.0-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
 
         <dependency>
             <groupId>com.banyue</groupId>

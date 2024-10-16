@@ -1,7 +1,7 @@
 package com.banyue.mapper;
 
-import com.banyue.api.Vo.Dept;
-import org.apache.ibatis.annotations.Mapper;
+
+import com.banyue.vo.Dept;
 
 import java.util.List;
 

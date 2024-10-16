@@ -1,8 +1,8 @@
 package com.banyue.service.impl;
 
-import com.banyue.api.Vo.Dept;
 import com.banyue.mapper.DeptMapper;
 import com.banyue.service.DeptBaseService;
+import com.banyue.vo.Dept;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

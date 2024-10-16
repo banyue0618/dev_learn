@@ -1,6 +1,6 @@
 package com.banyue.service;
 
-import com.banyue.api.Vo.Dept;
+import com.banyue.vo.Dept;
 
 import java.util.List;
 
